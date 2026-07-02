@@ -1,0 +1,16 @@
+{
+  "name": "Glossa",
+  "short_name": "Glossa",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2b2420",
+  "theme_color": "#2b2420",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
