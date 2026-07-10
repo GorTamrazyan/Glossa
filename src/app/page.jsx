@@ -572,6 +572,33 @@ export default function WordReader() {
                 WebkitAppearance: "none", // Убирает стандартные стили на iOS
               }}
             />
+            <div style={{ 
+                display: "flex", 
+                gap: "8px", 
+                marginBottom: "16px",
+                flexWrap: "wrap",
+                }}>
+                <button
+                    onClick={() => setCustomText("")}
+                    disabled={!customText.trim()}
+                    style={{
+                    flex: 1,
+                    border: `1px solid ${customText.trim() ? "#c0392b" : "#d8cbb0"}`,
+                    background: customText.trim() ? "#e74c3c" : "transparent",
+                    color: customText.trim() ? "#fff" : "#d8cbb0",
+                    padding: "clamp(10px, 2vw, 12px) clamp(16px, 3vw, 18px)",
+                    borderRadius: "8px",
+                    cursor: customText.trim() ? "pointer" : "default",
+                    fontFamily: "Spectral, serif",
+                    fontSize: "clamp(13px, 2vw, 14px)",
+                    touchAction: "manipulation",
+                    transition: "all 0.15s",
+                    opacity: customText.trim() ? 1 : 0.4,
+                    }}
+                >
+                    🗑 Очистить всё
+                </button>
+                </div>
             <button
               onClick={() => buildDictionary(customText)}
               disabled={!customText.trim() || dictLoading}
